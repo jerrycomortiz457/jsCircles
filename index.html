@@ -4,9 +4,10 @@
 </head>
 <body>
 
-	<svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
+	<svg id="svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"></svg>
 
 	<script>
+	
 	function Circle(cx, cy, html_id)
 	{
 		var html_id = html_id;
@@ -28,9 +29,9 @@
 			var circle = makeSVG('circle', 
 				{ 	cx: this.info.cx,
 				  	cy: this.info.cy,
-				  	r:  10,
+				  	r:  100,
 				  	id: html_id,
-				  	style: "fill: black"
+				  	style: "fill: green"
 				});
 
 			document.getElementById('svg').appendChild(circle);
@@ -93,7 +94,7 @@
 	}
 
 	var playground = new PlayGround();
-	setInterval(playground.loop, 15);
+	setInterval(playground.loop, 1);
 
 	document.onclick = function(e) {
 		playground.createNewCircle(e.x,e.y);
